@@ -1172,6 +1172,9 @@ There are a few things to note:
 
       TEMPLATE_DIRS = (
           os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
+          # The newer Django moved the setting files to the project directory. 
+          # if that didn't work try the following:
+          # os.path.join( 'templates').replace('\\','/'),
       )
 
   This example uses the "magic" Python variable ``__file__``, which is
